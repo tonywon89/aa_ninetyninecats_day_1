@@ -13,4 +13,7 @@ class Cat < ActiveRecord::Base
   validates :sex, length: { maximum: 1 }, inclusion: { in: ["M", "F"],
     message: "That's not a sex! Silly billy."}
 
+
+  has_many :cat_rental_requests, dependent: :destroy
+
 end
