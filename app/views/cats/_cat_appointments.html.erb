@@ -14,6 +14,12 @@
       <td>
         <%= link_to "Update Request", edit_cat_rental_request_url(rental) %>
       </td>
+      <td>
+        <%= button_to "Approve", approve_url(rental), method: "patch" %>
+      </td>
+      <td>
+        <%= button_to "Deny", deny_url(rental),  method: "patch" %> 
+      </td>
     </tr>
     <% end %>
 </table>

@@ -28,7 +28,6 @@ class CatRentalRequest < ActiveRecord::Base
 
   def approve!
     transaction do
-      debugger
       self.status = "APPROVED"
       save!
       overlapping_pending_requests.each do |non_important_request|
